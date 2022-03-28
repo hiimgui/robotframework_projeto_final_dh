@@ -48,25 +48,27 @@ Clicar em "Login"
     Sleep  5s
 
 Clicar no campo de input de email e colocar os dados e clicar em submit
-    Sleep  5s
+    Sleep  2s
+    Click Element                   ${BOTAO_CRIAR_CONTA}
+    Sleep  2s
     Click Element                   ${EMAIL_INPUT}
-    Sleep  5s
+    Sleep  2s
     INPUT TEXT                      ${EMAIL_INPUT}   guiprocgmail.com
-    Sleep  5s
+    Sleep  2s
     Click Element                   ${SENHA_INPUT}
-    Sleep  5s
+    Sleep  2s
     Clear Element Text                 name="email"
-    Sleep  5s
+    Sleep  2s
     INPUT TEXT                      ${EMAIL_INPUT}            guiproc@gmail.com
-    Sleep  5s
+    Sleep  2s
     INPUT TEXT                      ${SENHA_INPUT}              1234567
-    Sleep  5s
+    Sleep  2s
     INPUT TEXT                      ${NOME_INPUT}               guilherme
-    Sleep  5s
+    Sleep  2s
     INPUT TEXT                      ${SOBRENOME_INPUT}          procopio    
-    Sleep  5s
+    Sleep  2s
     Click Element                   ${CRIAR_CONTA_SUBMIT}
-    Sleep  5s
+    Sleep  2s
 
 Clicar em "Iniciar sessão página"
     Sleep  5s
