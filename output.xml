@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.10 on darwin)" generated="20220328 09:57:45.454" rpa="false" schemaversion="2">
+<suite id="s1" name="Ecotur" source="/Users/guilhermekageyama/Documents/Robot_Ecotur/ecotur.robot">
+<test id="s1-t1" name="[Teste do componente categorias]">
+<kw name="Abrir o site ecotur" library="ecotur" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SITE}</arg>
+<arg>${NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220328 09:57:46.731" level="INFO">Opening browser 'chrome' to base url 'http://hikari.s3-website-us-east-1.amazonaws.com/'.</msg>
+<status status="PASS" starttime="20220328 09:57:46.730" endtime="20220328 09:58:03.958"/>
+</kw>
+<status status="PASS" starttime="20220328 09:57:46.725" endtime="20220328 09:58:03.958"/>
+</kw>
+<kw name="Teste de botao do componente categorias" library="ecotur">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220328 09:58:08.961" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220328 09:58:03.960" endtime="20220328 09:58:08.961"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_VER_TODAS_CATEGORIAS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 09:58:08.965" level="INFO">Clicking element 'css=.MuiButton-outlinedPrimary'.</msg>
+<status status="PASS" starttime="20220328 09:58:08.962" endtime="20220328 09:58:09.126"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220328 09:58:11.128" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220328 09:58:09.126" endtime="20220328 09:58:11.129"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220328 09:58:11.129" endtime="20220328 09:58:11.259"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220328 09:58:13.261" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220328 09:58:11.260" endtime="20220328 09:58:13.262"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${CAROUSEL_BUTTON_LEFT}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220328 09:58:13.262" endtime="20220328 09:58:13.564"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220328 09:58:15.567" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220328 09:58:13.564" endtime="20220328 09:58:15.567"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CAROUSEL_BUTTON_LEFT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 09:58:15.569" level="INFO">Clicking element 'css=button.sc-dFtzxp:nth-child(1) &gt; svg:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220328 09:58:15.568" endtime="20220328 09:58:15.662"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220328 09:58:17.664" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220328 09:58:15.663" endtime="20220328 09:58:17.665"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CAROUSEL_BUTTON_RIGHT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 09:58:17.666" level="INFO">Clicking element 'css=button.sc-iqseJM:nth-child(2) &gt; svg:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220328 09:58:17.665" endtime="20220328 09:58:17.752"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220328 09:58:22.754" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220328 09:58:17.752" endtime="20220328 09:58:22.754"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${IMAGEM_CAROUSEL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 09:58:22.755" level="INFO">Clicking element 'css=div.swiper-slide:nth-child(10) &gt; div:nth-child(1) &gt; a:nth-child(1) &gt; div:nth-child(1)'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220328 09:58:23.399" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220328 09:58:22.792" endtime="20220328 09:58:23.400"/>
+</kw>
+<msg timestamp="20220328 09:58:23.413" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=99.0.4844.83)
+</msg>
+<status status="FAIL" starttime="20220328 09:58:22.755" endtime="20220328 09:58:23.413"/>
+</kw>
+<status status="FAIL" starttime="20220328 09:58:03.959" endtime="20220328 09:58:23.414"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220328 09:58:23.415" endtime="20220328 09:58:23.785"/>
+</kw>
+<status status="FAIL" starttime="20220328 09:57:46.651" endtime="20220328 09:58:23.785">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=99.0.4844.83)
+</status>
+</test>
+<status status="FAIL" starttime="20220328 09:57:45.460" endtime="20220328 09:58:23.791"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Ecotur">Ecotur</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
