@@ -18,9 +18,11 @@ Resource  ./ecotur.resource
 #     Clicar no campo de input de email e colocar os dados e clicar em submit
 #     Verificar se o email esta invalido
 
-# [Teste de componente de destino e data]
-#     Preencher componente de escolha de data e destino
+[Teste de componente de destino e data]
+    Preencher componente de escolha de data e destino
 
-[Teste do componente categorias]
-    Teste de botao do componente categorias
-    
+# [Teste do componente categorias]
+#     Teste de botao do componente categorias
+
+# [Teste componente recomendacoes]
+#     Teste componente recomendacoes   

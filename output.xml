@@ -1,115 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.10 on darwin)" generated="20220328 09:57:45.454" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.9.10 on darwin)" generated="20220328 11:13:49.548" rpa="false" schemaversion="2">
 <suite id="s1" name="Ecotur" source="/Users/guilhermekageyama/Documents/Robot_Ecotur/ecotur.robot">
-<test id="s1-t1" name="[Teste do componente categorias]">
+<test id="s1-t1" name="[Teste de componente de destino e data]">
 <kw name="Abrir o site ecotur" library="ecotur" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${SITE}</arg>
 <arg>${NAVEGADOR}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220328 09:57:46.731" level="INFO">Opening browser 'chrome' to base url 'http://hikari.s3-website-us-east-1.amazonaws.com/'.</msg>
-<status status="PASS" starttime="20220328 09:57:46.730" endtime="20220328 09:58:03.958"/>
+<msg timestamp="20220328 11:13:50.270" level="INFO">Opening browser 'chrome' to base url 'http://hikari.s3-website-us-east-1.amazonaws.com/'.</msg>
+<status status="PASS" starttime="20220328 11:13:50.269" endtime="20220328 11:14:08.410"/>
 </kw>
-<status status="PASS" starttime="20220328 09:57:46.725" endtime="20220328 09:58:03.958"/>
+<status status="PASS" starttime="20220328 11:13:50.269" endtime="20220328 11:14:08.411"/>
 </kw>
-<kw name="Teste de botao do componente categorias" library="ecotur">
+<kw name="Preencher componente de escolha de data e destino" library="ecotur">
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 09:58:08.961" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220328 09:58:03.960" endtime="20220328 09:58:08.961"/>
+<msg timestamp="20220328 11:14:13.414" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220328 11:14:08.412" endtime="20220328 11:14:13.414"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${BOTAO_VER_TODAS_CATEGORIAS}</arg>
+<arg>${DESTINO_INPUT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220328 09:58:08.965" level="INFO">Clicking element 'css=.MuiButton-outlinedPrimary'.</msg>
-<status status="PASS" starttime="20220328 09:58:08.962" endtime="20220328 09:58:09.126"/>
+<msg timestamp="20220328 11:14:13.415" level="INFO">Clicking element 'css=#location-auto-complete'.</msg>
+<status status="PASS" starttime="20220328 11:14:13.414" endtime="20220328 11:14:13.590"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 09:58:11.128" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220328 09:58:09.126" endtime="20220328 09:58:11.129"/>
+<msg timestamp="20220328 11:14:14.592" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220328 11:14:13.590" endtime="20220328 11:14:14.593"/>
 </kw>
-<kw name="Go Back" library="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" starttime="20220328 09:58:11.129" endtime="20220328 09:58:11.259"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${DESTINO_INPUT}</arg>
+<arg>Brotas</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220328 11:14:14.596" level="INFO">Typing text 'Brotas' into text field 'css=#location-auto-complete'.</msg>
+<status status="PASS" starttime="20220328 11:14:14.593" endtime="20220328 11:14:14.915"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 09:58:13.261" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220328 09:58:11.260" endtime="20220328 09:58:13.262"/>
+<msg timestamp="20220328 11:14:15.917" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220328 11:14:14.915" endtime="20220328 11:14:15.917"/>
 </kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${CAROUSEL_BUTTON_LEFT}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220328 09:58:13.262" endtime="20220328 09:58:13.564"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${DESTINO_INPUT}</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220328 11:14:15.918" level="INFO">Sending key(s) ('ARROW_DOWN',) to css=#location-auto-complete element.</msg>
+<msg timestamp="20220328 11:14:16.231" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg timestamp="20220328 11:14:16.231" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20220328 11:14:15.917" endtime="20220328 11:14:16.253"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 09:58:15.567" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220328 09:58:13.564" endtime="20220328 09:58:15.567"/>
+<msg timestamp="20220328 11:14:17.254" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220328 11:14:16.253" endtime="20220328 11:14:17.255"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${DESTINO_INPUT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220328 11:14:17.256" level="INFO">Sending key(s) ('ENTER',) to css=#location-auto-complete element.</msg>
+<msg timestamp="20220328 11:14:17.532" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220328 11:14:17.532" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220328 11:14:17.255" endtime="20220328 11:14:17.566"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${CAROUSEL_BUTTON_LEFT}</arg>
+<arg>${CHECKIN_DATE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220328 09:58:15.569" level="INFO">Clicking element 'css=button.sc-dFtzxp:nth-child(1) &gt; svg:nth-child(1)'.</msg>
-<status status="PASS" starttime="20220328 09:58:15.568" endtime="20220328 09:58:15.662"/>
+<msg timestamp="20220328 11:14:17.567" level="INFO">Clicking element 'css=#mui-5'.</msg>
+<status status="PASS" starttime="20220328 11:14:17.566" endtime="20220328 11:14:17.991"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 09:58:17.664" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220328 09:58:15.663" endtime="20220328 09:58:17.665"/>
+<msg timestamp="20220328 11:14:18.992" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220328 11:14:17.991" endtime="20220328 11:14:18.992"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${CAROUSEL_BUTTON_RIGHT}</arg>
+<arg>${DATE_PICKER_1}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220328 09:58:17.666" level="INFO">Clicking element 'css=button.sc-iqseJM:nth-child(2) &gt; svg:nth-child(1)'.</msg>
-<status status="PASS" starttime="20220328 09:58:17.665" endtime="20220328 09:58:17.752"/>
+<msg timestamp="20220328 11:14:18.995" level="INFO">Clicking element 'css=div.sc-jivBlf:nth-child(1) &gt; div:nth-child(3) &gt; div:nth-child(1) &gt; div:nth-child(5) &gt; div:nth-child(5) &gt; div:nth-child(1) &gt; button:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220328 11:14:18.993" endtime="20220328 11:14:19.232"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 09:58:22.754" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220328 09:58:17.752" endtime="20220328 09:58:22.754"/>
+<msg timestamp="20220328 11:14:20.235" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220328 11:14:19.233" endtime="20220328 11:14:20.235"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${IMAGEM_CAROUSEL}</arg>
+<arg>${DATE_PICKER_2}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220328 09:58:22.755" level="INFO">Clicking element 'css=div.swiper-slide:nth-child(10) &gt; div:nth-child(1) &gt; a:nth-child(1) &gt; div:nth-child(1)'.</msg>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220328 09:58:23.399" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220328 09:58:22.792" endtime="20220328 09:58:23.400"/>
+<msg timestamp="20220328 11:14:20.237" level="INFO">Clicking element 'css=div.sc-jivBlf:nth-child(2) &gt; div:nth-child(3) &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; div:nth-child(4) &gt; div:nth-child(1) &gt; button:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220328 11:14:20.236" endtime="20220328 11:14:20.870"/>
 </kw>
-<msg timestamp="20220328 09:58:23.413" level="FAIL">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=99.0.4844.83)
-</msg>
-<status status="FAIL" starttime="20220328 09:58:22.755" endtime="20220328 09:58:23.413"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220328 11:14:21.871" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220328 11:14:20.870" endtime="20220328 11:14:21.872"/>
 </kw>
-<status status="FAIL" starttime="20220328 09:58:03.959" endtime="20220328 09:58:23.414"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PESQUISAR_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 11:14:21.873" level="INFO">Clicking element 'css=button.sc-iqseJM:nth-child(5)'.</msg>
+<status status="PASS" starttime="20220328 11:14:21.872" endtime="20220328 11:14:21.986"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220328 11:14:24.987" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220328 11:14:21.986" endtime="20220328 11:14:24.988"/>
+</kw>
+<status status="PASS" starttime="20220328 11:14:08.412" endtime="20220328 11:14:24.988"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220328 09:58:23.415" endtime="20220328 09:58:23.785"/>
+<status status="PASS" starttime="20220328 11:14:24.989" endtime="20220328 11:14:25.270"/>
 </kw>
-<status status="FAIL" starttime="20220328 09:57:46.651" endtime="20220328 09:58:23.785">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=99.0.4844.83)
-</status>
+<status status="PASS" starttime="20220328 11:13:50.267" endtime="20220328 11:14:25.271"/>
 </test>
-<status status="FAIL" starttime="20220328 09:57:45.460" endtime="20220328 09:58:23.791"/>
+<status status="PASS" starttime="20220328 11:13:49.551" endtime="20220328 11:14:25.288"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Ecotur">Ecotur</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ecotur">Ecotur</stat>
 </suite>
 </statistics>
 <errors>

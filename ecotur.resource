@@ -15,10 +15,23 @@ ${DESTINO_INPUT}        css=#location-auto-complete
 ${CHECKIN_DATE}         css=#mui-5
 ${DATE_PICKER_1}        css=div.sc-jivBlf:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(5) > div:nth-child(5) > div:nth-child(1) > button:nth-child(1)
 ${DATE_PICKER_2}        css=div.sc-jivBlf:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > button:nth-child(1)
+${PESQUISAR_BUTTON}     css=button.sc-iqseJM:nth-child(5)
 ${BOTAO_VER_TODAS_CATEGORIAS}   css=.MuiButton-outlinedPrimary
 ${CAROUSEL_BUTTON_LEFT}         css=button.sc-dFtzxp:nth-child(1) > svg:nth-child(1) 
 ${CAROUSEL_BUTTON_RIGHT}        css=button.sc-iqseJM:nth-child(2) > svg:nth-child(1)
 ${IMAGEM_CAROUSEL}              css=div.swiper-slide:nth-child(10) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > img:nth-child(1)
+${RECOMENDACOES_COMPONENT}       css=div.sc-hKwDye:nth-child(2)
+${RECOMENDACOES_VER_MAIS}        css=.MuiButton-outlinedSecondary
+${RECOMENDACOES_VER_DETALHES_1}    css=div.sc-kYHfwS:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
+${RECOMENDACOES_VER_DETALHES_2}     css=div.dEKTNl:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
+${RECOMENDACOES_VER_DETALHES_3}     css=div.sc-kYHfwS:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
+${RECOMENDACOES_VER_DETALHES_4}     css=div.sc-kYHfwS:nth-child(4) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
+${RECOMENDACOES_VER_DETALHES_5}     css=div.sc-kYHfwS:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
+${RECOMENDACOES_VER_DETALHES_6}     css=div.sc-kYHfwS:nth-child(6) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
+${RECOMENDACOES_VER_DETALHES_7}     css=div.sc-kYHfwS:nth-child(7) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
+${RECOMENDACOES_VER_DETALHES_8}     css=div.sc-kYHfwS:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
+${RECOMENDACOES_VER_DETALHES_9}     css=div.sc-kYHfwS:nth-child(9) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
+${RECOMENDACOES_VER_DETALHES_10}    css=div.sc-kYHfwS:nth-child(10) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
 
 *** Keywords ***
 Abrir o site ecotur
@@ -79,14 +92,19 @@ Preencher componente de escolha de data e destino
     Sleep  5s
     Click Element                 ${DESTINO_INPUT}
     Sleep  1s
-    INPUT TEXT                    ${DESTINO_INPUT}   Curitiba
+    INPUT TEXT                    ${DESTINO_INPUT}   Brotas
     Sleep  1s
+    Press Keys                    ${DESTINO_INPUT}     ARROW_DOWN
+    Sleep  1s
+    Press Keys                     ${DESTINO_INPUT}      ENTER
     Click Element                 ${CHECKIN_DATE}
     Sleep  1s
     Click Element                 ${DATE_PICKER_1}
     Sleep  1s
     Click Element                 ${DATE_PICKER_2}
     Sleep  1s
+    Click Element                   ${PESQUISAR_BUTTON}
+    Sleep  3s
 
 Teste de botao do componente categorias
     Sleep  5s
@@ -100,7 +118,73 @@ Teste de botao do componente categorias
     Sleep  2s
     Click Element                  ${CAROUSEL_BUTTON_RIGHT}
     Sleep  5s
-    Click Element                   ${IMAGEM_CAROUSEL}
+
+Teste componente recomendacoes
+    Sleep  5s
+    Scroll Element Into View        ${RECOMENDACOES_COMPONENT}
+    Sleep  3s
+    Click Element                   ${RECOMENDACOES_VER_MAIS}
+    Sleep  3s
+    Go Back
+    Sleep  3s
+    Scroll Element Into View        ${RECOMENDACOES_COMPONENT}
+    Sleep  2s
+    Click Element                   ${RECOMENDACOES_VER_DETALHES_1}
+    Sleep  2s
+    Go Back
+    Sleep  3s
+    Scroll Element Into View        ${RECOMENDACOES_COMPONENT}
+    Sleep  2s
+    Click Element                   ${RECOMENDACOES_VER_DETALHES_2}
+    Sleep  2s
+    Go Back
+    Sleep  3s
+    Scroll Element Into View        ${RECOMENDACOES_COMPONENT}
+    Sleep  2s
+    Click Element                   ${RECOMENDACOES_VER_DETALHES_3}
+    Sleep  2s
+    Go Back
+    Sleep  3s
+    Scroll Element Into View        ${RECOMENDACOES_COMPONENT}
+    Sleep  2s
+    Click Element                   ${RECOMENDACOES_VER_DETALHES_4}
+    Sleep  2s
+    Go Back
+    Sleep  3s
+    Scroll Element Into View        ${RECOMENDACOES_COMPONENT}
+    Sleep  2s
+    Click Element                   ${RECOMENDACOES_VER_DETALHES_5}
+    Sleep  2s
+    Go Back
+    Sleep  3s
+    Scroll Element Into View        ${RECOMENDACOES_COMPONENT}
+    Sleep  2s
+    Click Element                   ${RECOMENDACOES_VER_DETALHES_6}
+    Sleep  2s
+    Go Back
+    Sleep  3s
+    Scroll Element Into View        ${RECOMENDACOES_COMPONENT}
+    Sleep  2s
+    Click Element                   ${RECOMENDACOES_VER_DETALHES_7}
+    Sleep  2s
+    Go Back
+    Sleep  3s
+    Scroll Element Into View        ${RECOMENDACOES_COMPONENT}
+    Sleep  2s
+    Click Element                   ${RECOMENDACOES_VER_DETALHES_8}
+    Sleep  2s
+    Go Back
+    Sleep  3s
+    Scroll Element Into View        ${RECOMENDACOES_COMPONENT}
+    Sleep  2s
+    Click Element                   ${RECOMENDACOES_VER_DETALHES_9}
+    Sleep  2s
+    Go Back
+    Sleep  3s
+    Scroll Element Into View        ${RECOMENDACOES_COMPONENT}
+    Sleep  2s
+    Click Element                   ${RECOMENDACOES_VER_DETALHES_10}
+    Sleep  2s
 
 
 
