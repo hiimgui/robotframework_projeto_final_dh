@@ -30,5 +30,7 @@ Resource  ./ecotur.resource
 #     Teste pagina de produtos
 # [Teste pagina de produtos filtro]
 #     Teste pagina de produtos filtro
-[Teste de slider pagina de produtos]
-     Teste de slider pagina de produtos
+# [Teste de slider pagina de produtos]
+#      Teste de slider pagina de produtos
+[Teste botao exibir pagina produtos]
+    Teste botao "Exibir" 

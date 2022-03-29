@@ -42,6 +42,8 @@ ${FILTRO_ECO_RESORT}  css=li.sc-dcgwPl:nth-child(4) > div:nth-child(1) > div:nth
 ${FILTRO_ECO_CAMPING}  css=li.sc-dcgwPl:nth-child(5) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)
 ${FILTRO_ATIVIDADES}  css=li.sc-dcgwPl:nth-child(6) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)
 ${SLIDER_PRODUTOS}      css=.sc-gnnDb
+${BOTAO_EXIBIR}         css=.eWfbNN > div:nth-child(1) > button:nth-child(2) > span:nth-child(2) > svg:nth-child(1)
+${BOTAO_EXIBIR_24}      css=li.sc-iqseJM:nth-child(3)
 
 *** Keywords ***
 Abrir o site ecotur
@@ -253,6 +255,15 @@ Teste de slider pagina de produtos
     Sleep  2s                      
     Drag And Drop By Offset         ${SLIDER_PRODUTOS}  -10  0  
     Sleep  5s
+Teste botao "Exibir" 
+    Sleep  3s
+    Click Element                  ${BOTAO_VER_TODAS_CATEGORIAS}
+    Sleep  5s
+    Click Element                   ${BOTAO_EXIBIR}  
+    Sleep  4s
+    Click Element                   ${BOTAO_EXIBIR_24}
+    Sleep  5s
+
     
     
 
