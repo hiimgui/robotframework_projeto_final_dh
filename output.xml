@@ -1,130 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.10 on darwin)" generated="20220328 11:13:49.548" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.9.10 on darwin)" generated="20220329 09:54:19.285" rpa="false" schemaversion="2">
 <suite id="s1" name="Ecotur" source="/Users/guilhermekageyama/Documents/Robot_Ecotur/ecotur.robot">
-<test id="s1-t1" name="[Teste de componente de destino e data]">
+<test id="s1-t1" name="[Teste pagina de produtos filtro]">
 <kw name="Abrir o site ecotur" library="ecotur" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${SITE}</arg>
 <arg>${NAVEGADOR}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220328 11:13:50.270" level="INFO">Opening browser 'chrome' to base url 'http://hikari.s3-website-us-east-1.amazonaws.com/'.</msg>
-<status status="PASS" starttime="20220328 11:13:50.269" endtime="20220328 11:14:08.410"/>
+<msg timestamp="20220329 09:54:19.995" level="INFO">Opening browser 'chrome' to base url 'http://hikari.s3-website-us-east-1.amazonaws.com/'.</msg>
+<status status="PASS" starttime="20220329 09:54:19.994" endtime="20220329 09:54:38.161"/>
 </kw>
-<status status="PASS" starttime="20220328 11:13:50.269" endtime="20220328 11:14:08.411"/>
+<status status="PASS" starttime="20220329 09:54:19.994" endtime="20220329 09:54:38.162"/>
 </kw>
-<kw name="Preencher componente de escolha de data e destino" library="ecotur">
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 11:14:13.414" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220328 11:14:08.412" endtime="20220328 11:14:13.414"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${DESTINO_INPUT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220328 11:14:13.415" level="INFO">Clicking element 'css=#location-auto-complete'.</msg>
-<status status="PASS" starttime="20220328 11:14:13.414" endtime="20220328 11:14:13.590"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 11:14:14.592" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220328 11:14:13.590" endtime="20220328 11:14:14.593"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${DESTINO_INPUT}</arg>
-<arg>Brotas</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220328 11:14:14.596" level="INFO">Typing text 'Brotas' into text field 'css=#location-auto-complete'.</msg>
-<status status="PASS" starttime="20220328 11:14:14.593" endtime="20220328 11:14:14.915"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 11:14:15.917" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220328 11:14:14.915" endtime="20220328 11:14:15.917"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${DESTINO_INPUT}</arg>
-<arg>ARROW_DOWN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220328 11:14:15.918" level="INFO">Sending key(s) ('ARROW_DOWN',) to css=#location-auto-complete element.</msg>
-<msg timestamp="20220328 11:14:16.231" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
-<msg timestamp="20220328 11:14:16.231" level="INFO">Releasing special key ARROW_DOWN.</msg>
-<status status="PASS" starttime="20220328 11:14:15.917" endtime="20220328 11:14:16.253"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 11:14:17.254" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220328 11:14:16.253" endtime="20220328 11:14:17.255"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${DESTINO_INPUT}</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220328 11:14:17.256" level="INFO">Sending key(s) ('ENTER',) to css=#location-auto-complete element.</msg>
-<msg timestamp="20220328 11:14:17.532" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20220328 11:14:17.532" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20220328 11:14:17.255" endtime="20220328 11:14:17.566"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${CHECKIN_DATE}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220328 11:14:17.567" level="INFO">Clicking element 'css=#mui-5'.</msg>
-<status status="PASS" starttime="20220328 11:14:17.566" endtime="20220328 11:14:17.991"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 11:14:18.992" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220328 11:14:17.991" endtime="20220328 11:14:18.992"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${DATE_PICKER_1}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220328 11:14:18.995" level="INFO">Clicking element 'css=div.sc-jivBlf:nth-child(1) &gt; div:nth-child(3) &gt; div:nth-child(1) &gt; div:nth-child(5) &gt; div:nth-child(5) &gt; div:nth-child(1) &gt; button:nth-child(1)'.</msg>
-<status status="PASS" starttime="20220328 11:14:18.993" endtime="20220328 11:14:19.232"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 11:14:20.235" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220328 11:14:19.233" endtime="20220328 11:14:20.235"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${DATE_PICKER_2}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220328 11:14:20.237" level="INFO">Clicking element 'css=div.sc-jivBlf:nth-child(2) &gt; div:nth-child(3) &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; div:nth-child(4) &gt; div:nth-child(1) &gt; button:nth-child(1)'.</msg>
-<status status="PASS" starttime="20220328 11:14:20.236" endtime="20220328 11:14:20.870"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 11:14:21.871" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220328 11:14:20.870" endtime="20220328 11:14:21.872"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${PESQUISAR_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220328 11:14:21.873" level="INFO">Clicking element 'css=button.sc-iqseJM:nth-child(5)'.</msg>
-<status status="PASS" starttime="20220328 11:14:21.872" endtime="20220328 11:14:21.986"/>
-</kw>
+<kw name="Teste pagina de produtos filtro" library="ecotur">
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220328 11:14:24.987" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220328 11:14:21.986" endtime="20220328 11:14:24.988"/>
+<msg timestamp="20220329 09:54:41.172" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220329 09:54:38.172" endtime="20220329 09:54:41.173"/>
 </kw>
-<status status="PASS" starttime="20220328 11:14:08.412" endtime="20220328 11:14:24.988"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_VER_TODAS_CATEGORIAS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:41.175" level="INFO">Clicking element 'css=.MuiButton-outlinedPrimary'.</msg>
+<status status="PASS" starttime="20220329 09:54:41.173" endtime="20220329 09:54:41.346"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:43.349" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220329 09:54:41.347" endtime="20220329 09:54:43.350"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_HOTEL_FAZENDA_CHECKED}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:43.351" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:43.350" endtime="20220329 09:54:43.458"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:44.460" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:43.458" endtime="20220329 09:54:44.461"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_HOTEL_FAZENDA_CHECKED}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:44.462" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:44.461" endtime="20220329 09:54:44.525"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:45.529" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:44.525" endtime="20220329 09:54:45.530"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_ECO_POUSADA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:45.531" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(2) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:45.530" endtime="20220329 09:54:45.698"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:46.702" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:45.699" endtime="20220329 09:54:46.702"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_ECO_POUSADA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:46.704" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(2) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:46.703" endtime="20220329 09:54:46.761"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:47.764" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:46.762" endtime="20220329 09:54:47.764"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_ECO_RESORT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:47.765" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(4) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:47.764" endtime="20220329 09:54:47.853"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:48.855" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:47.853" endtime="20220329 09:54:48.855"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_ECO_RESORT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:48.856" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(4) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:48.855" endtime="20220329 09:54:48.912"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:49.913" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:48.912" endtime="20220329 09:54:49.913"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_ECO_CAMPING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:49.915" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(5) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:49.914" endtime="20220329 09:54:50.069"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:51.071" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:50.069" endtime="20220329 09:54:51.072"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_ECO_CAMPING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:51.073" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(5) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:51.072" endtime="20220329 09:54:51.163"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:52.168" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:51.163" endtime="20220329 09:54:52.169"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_HOTEL_SELVA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:52.171" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(3) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:52.170" endtime="20220329 09:54:52.532"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:53.535" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:52.534" endtime="20220329 09:54:53.535"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_HOTEL_SELVA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:53.537" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(3) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:53.537" endtime="20220329 09:54:53.585"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:54.586" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:53.585" endtime="20220329 09:54:54.586"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_ATIVIDADES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:54.587" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(6) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:54.587" endtime="20220329 09:54:54.763"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:55.765" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:54.763" endtime="20220329 09:54:55.765"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FILTRO_ATIVIDADES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 09:54:55.766" level="INFO">Clicking element 'css=li.sc-dcgwPl:nth-child(6) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span:nth-child(1) &gt; input:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220329 09:54:55.766" endtime="20220329 09:54:55.826"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220329 09:54:56.828" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220329 09:54:55.827" endtime="20220329 09:54:56.829"/>
+</kw>
+<status status="PASS" starttime="20220329 09:54:38.165" endtime="20220329 09:54:56.829"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220328 11:14:24.989" endtime="20220328 11:14:25.270"/>
+<status status="PASS" starttime="20220329 09:54:56.830" endtime="20220329 09:54:56.999"/>
 </kw>
-<status status="PASS" starttime="20220328 11:13:50.267" endtime="20220328 11:14:25.271"/>
+<status status="PASS" starttime="20220329 09:54:19.992" endtime="20220329 09:54:57.000"/>
 </test>
-<status status="PASS" starttime="20220328 11:13:49.551" endtime="20220328 11:14:25.288"/>
+<status status="PASS" starttime="20220329 09:54:19.288" endtime="20220329 09:54:57.002"/>
 </suite>
 <statistics>
 <total>

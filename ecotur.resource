@@ -13,9 +13,12 @@ ${BOTAO_MUDAR_TEMA}     css=button.sc-iqseJM:nth-child(3)
 ${EMPTY}                ""
 ${DESTINO_INPUT}        css=#location-auto-complete
 ${CHECKIN_DATE}         css=#mui-5
+${CHECKIN_DATE_PRODUTOS}  css=.InputBase-root-start-date
+${CHECKOUT_DATE_PRODUTOS}  css=#mui-122
 ${DATE_PICKER_1}        css=div.sc-jivBlf:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(5) > div:nth-child(5) > div:nth-child(1) > button:nth-child(1)
-${DATE_PICKER_2}        css=div.sc-jivBlf:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > button:nth-child(1)
+${DATE_PICKER_2}        css=div.sc-jivBlf:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div:nth-child(1) > button:nth-child(1)
 ${PESQUISAR_BUTTON}     css=button.sc-iqseJM:nth-child(5)
+${PESQUISAR_BUTTON_PRODUTO}  css=button.MuiButton-root:nth-child(3)
 ${BOTAO_VER_TODAS_CATEGORIAS}   css=.MuiButton-outlinedPrimary
 ${CAROUSEL_BUTTON_LEFT}         css=button.sc-dFtzxp:nth-child(1) > svg:nth-child(1) 
 ${CAROUSEL_BUTTON_RIGHT}        css=button.sc-iqseJM:nth-child(2) > svg:nth-child(1)
@@ -32,6 +35,13 @@ ${RECOMENDACOES_VER_DETALHES_7}     css=div.sc-kYHfwS:nth-child(7) > div:nth-chi
 ${RECOMENDACOES_VER_DETALHES_8}     css=div.sc-kYHfwS:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
 ${RECOMENDACOES_VER_DETALHES_9}     css=div.sc-kYHfwS:nth-child(9) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
 ${RECOMENDACOES_VER_DETALHES_10}    css=div.sc-kYHfwS:nth-child(10) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
+${FILTRO_HOTEL_FAZENDA_CHECKED}  css=li.sc-dcgwPl:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)
+${FILTRO_ECO_POUSADA}   css=li.sc-dcgwPl:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)
+${FILTRO_HOTEL_SELVA}   css=li.sc-dcgwPl:nth-child(3) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)
+${FILTRO_ECO_RESORT}  css=li.sc-dcgwPl:nth-child(4) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)
+${FILTRO_ECO_CAMPING}  css=li.sc-dcgwPl:nth-child(5) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)
+${FILTRO_ATIVIDADES}  css=li.sc-dcgwPl:nth-child(6) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)
+
 
 *** Keywords ***
 Abrir o site ecotur
@@ -187,6 +197,57 @@ Teste componente recomendacoes
     Sleep  2s
     Click Element                   ${RECOMENDACOES_VER_DETALHES_10}
     Sleep  2s
+    
+Teste pagina de produtos
+    Sleep  3s
+    Click Element                  ${BOTAO_VER_TODAS_CATEGORIAS}
+    Sleep  2s
+    Click Element                 ${DESTINO_INPUT}
+    Sleep  1s
+    INPUT TEXT                    ${DESTINO_INPUT}   Brotas
+    Sleep  1s
+    Click Element                 ${CHECKOUT_DATE_PRODUTOS}
+    Sleep  1s
+    Click Element                 ${DATE_PICKER_2}
+    Sleep  1s
+    Click Element                 ${DATE_PICKER_1}
+    Sleep  1s
+    Press Keys                      ${DATE_PICKER_2}   TAB
+    Sleep  1s
+    Click Element                   ${PESQUISAR_BUTTON_PRODUTO}
+    Sleep  3s
+
+Teste pagina de produtos filtro
+    Sleep  3s
+    Click Element                  ${BOTAO_VER_TODAS_CATEGORIAS}
+    Sleep  2s                      
+    Click Element                   ${FILTRO_HOTEL_FAZENDA_CHECKED}
+    Sleep  1s
+    Click Element                   ${FILTRO_HOTEL_FAZENDA_CHECKED}
+    Sleep  1s
+    Click Element                   ${FILTRO_ECO_POUSADA}
+    Sleep  1s
+    Click Element                   ${FILTRO_ECO_POUSADA}
+    Sleep  1s
+    Click Element                   ${FILTRO_ECO_RESORT}
+    Sleep  1s
+    Click Element                   ${FILTRO_ECO_RESORT}
+    Sleep  1s
+    Click Element                   ${FILTRO_ECO_CAMPING}
+    Sleep  1s   
+    Click Element                   ${FILTRO_ECO_CAMPING}
+    Sleep  1s
+    Click Element                   ${FILTRO_HOTEL_SELVA}
+    Sleep  1s
+    Click Element                   ${FILTRO_HOTEL_SELVA}
+    Sleep  1s
+    Click Element                   ${FILTRO_ATIVIDADES}
+    Sleep  1s
+    Click Element                   ${FILTRO_ATIVIDADES}
+    Sleep  1s
+
+    
+    
 
 
 
