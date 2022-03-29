@@ -41,7 +41,7 @@ ${FILTRO_HOTEL_SELVA}   css=li.sc-dcgwPl:nth-child(3) > div:nth-child(1) > div:n
 ${FILTRO_ECO_RESORT}  css=li.sc-dcgwPl:nth-child(4) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)
 ${FILTRO_ECO_CAMPING}  css=li.sc-dcgwPl:nth-child(5) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)
 ${FILTRO_ATIVIDADES}  css=li.sc-dcgwPl:nth-child(6) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)
-
+${SLIDER_PRODUTOS}      css=.sc-gnnDb
 
 *** Keywords ***
 Abrir o site ecotur
@@ -245,7 +245,14 @@ Teste pagina de produtos filtro
     Sleep  1s
     Click Element                   ${FILTRO_ATIVIDADES}
     Sleep  1s
-
+Teste de slider pagina de produtos
+    Sleep  3s
+    Click Element                  ${BOTAO_VER_TODAS_CATEGORIAS}
+    Sleep  2s
+    Scroll Element Into View                ${SLIDER_PRODUTOS}
+    Sleep  2s                      
+    Drag And Drop By Offset         ${SLIDER_PRODUTOS}  -10  0  
+    Sleep  5s
     
     
 

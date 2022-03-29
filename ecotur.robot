@@ -28,5 +28,7 @@ Resource  ./ecotur.resource
 #     Teste componente recomendacoes   
 # [Teste página de produtos]
 #     Teste pagina de produtos
-[Teste pagina de produtos filtro]
-    Teste pagina de produtos filtro
+# [Teste pagina de produtos filtro]
+#     Teste pagina de produtos filtro
+[Teste de slider pagina de produtos]
+     Teste de slider pagina de produtos
