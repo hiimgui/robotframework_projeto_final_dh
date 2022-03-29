@@ -44,6 +44,8 @@ ${FILTRO_ATIVIDADES}  css=li.sc-dcgwPl:nth-child(6) > div:nth-child(1) > div:nth
 ${SLIDER_PRODUTOS}      css=.sc-gnnDb
 ${BOTAO_EXIBIR}         css=.eWfbNN > div:nth-child(1) > button:nth-child(2) > span:nth-child(2) > svg:nth-child(1)
 ${BOTAO_EXIBIR_24}      css=li.sc-iqseJM:nth-child(3)
+${BOTAO_ORDENAR}        css=.eWfbNN > div:nth-child(2) > button:nth-child(2) > span:nth-child(2)
+${BOTAO_ORDENAR_PRECO_CRESCENTE}   css=li.sc-iqseJM:nth-child(2)
 
 *** Keywords ***
 Abrir o site ecotur
@@ -263,7 +265,14 @@ Teste botao "Exibir"
     Sleep  4s
     Click Element                   ${BOTAO_EXIBIR_24}
     Sleep  5s
-
+Teste botao "Ordenar"
+    Sleep  3s
+    Click Element                  ${BOTAO_VER_TODAS_CATEGORIAS}
+    Sleep  5s
+    Click Element                   ${BOTAO_ORDENAR}
+    Sleep  3s
+    Click Element                   ${BOTAO_ORDENAR_PRECO_CRESCENTE}
+    Sleep  3s
     
     
 
