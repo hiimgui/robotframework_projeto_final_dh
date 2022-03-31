@@ -1,78 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.10 on darwin)" generated="20220329 10:24:03.962" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.9.10 on darwin)" generated="20220330 09:32:10.633" rpa="false" schemaversion="2">
 <suite id="s1" name="Ecotur" source="/Users/guilhermekageyama/Documents/Robot_Ecotur/ecotur.robot">
-<test id="s1-t1" name="[Teste botao &quot;Ordenar&quot;]">
+<test id="s1-t1" name="[Teste de mudar de tema do site]">
 <kw name="Abrir o site ecotur" library="ecotur" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${SITE}</arg>
 <arg>${NAVEGADOR}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220329 10:24:04.502" level="INFO">Opening browser 'chrome' to base url 'http://hikari.s3-website-us-east-1.amazonaws.com/'.</msg>
-<status status="PASS" starttime="20220329 10:24:04.501" endtime="20220329 10:24:22.924"/>
+<msg timestamp="20220330 09:32:12.114" level="INFO">Opening browser 'chrome' to base url 'http://hikari.s3-website-us-east-1.amazonaws.com/'.</msg>
+<status status="PASS" starttime="20220330 09:32:12.106" endtime="20220330 09:32:35.460"/>
 </kw>
-<status status="PASS" starttime="20220329 10:24:04.500" endtime="20220329 10:24:22.924"/>
+<status status="PASS" starttime="20220330 09:32:12.106" endtime="20220330 09:32:35.461"/>
+</kw>
+<kw name="Clicar ícone de mudança de tema" library="ecotur">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220330 09:32:40.464" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220330 09:32:35.462" endtime="20220330 09:32:40.464"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_MUDAR_TEMA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220330 09:32:40.466" level="INFO">Clicking element 'css=button.sc-iqseJM:nth-child(3)'.</msg>
+<status status="PASS" starttime="20220330 09:32:40.464" endtime="20220330 09:32:40.785"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220330 09:32:45.786" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220330 09:32:40.786" endtime="20220330 09:32:45.787"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_MUDAR_TEMA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220330 09:32:45.788" level="INFO">Clicking element 'css=button.sc-iqseJM:nth-child(3)'.</msg>
+<status status="PASS" starttime="20220330 09:32:45.787" endtime="20220330 09:32:46.016"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220330 09:32:51.019" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220330 09:32:46.016" endtime="20220330 09:32:51.019"/>
+</kw>
+<status status="PASS" starttime="20220330 09:32:35.461" endtime="20220330 09:32:51.019"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220330 09:32:51.020" endtime="20220330 09:32:51.200"/>
+</kw>
+<status status="PASS" starttime="20220330 09:32:12.103" endtime="20220330 09:32:51.200"/>
+</test>
+<test id="s1-t2" name="[Teste botao &quot;Ordenar&quot;]">
+<kw name="Abrir o site ecotur" library="ecotur" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SITE}</arg>
+<arg>${NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220330 09:32:51.203" level="INFO">Opening browser 'chrome' to base url 'http://hikari.s3-website-us-east-1.amazonaws.com/'.</msg>
+<status status="PASS" starttime="20220330 09:32:51.202" endtime="20220330 09:33:17.743"/>
+</kw>
+<status status="PASS" starttime="20220330 09:32:51.201" endtime="20220330 09:33:17.744"/>
 </kw>
 <kw name="Teste botao &quot;Ordenar&quot;" library="ecotur">
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220329 10:24:25.929" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220329 10:24:22.928" endtime="20220329 10:24:25.929"/>
+<msg timestamp="20220330 09:33:20.748" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220330 09:33:17.746" endtime="20220330 09:33:20.748"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BOTAO_VER_TODAS_CATEGORIAS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220329 10:24:25.932" level="INFO">Clicking element 'css=.MuiButton-outlinedPrimary'.</msg>
-<status status="PASS" starttime="20220329 10:24:25.930" endtime="20220329 10:24:26.138"/>
+<msg timestamp="20220330 09:33:20.750" level="INFO">Clicking element 'css=.MuiButton-outlinedPrimary'.</msg>
+<status status="PASS" starttime="20220330 09:33:20.749" endtime="20220330 09:33:20.944"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220329 10:24:31.140" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220329 10:24:26.138" endtime="20220329 10:24:31.140"/>
+<msg timestamp="20220330 09:33:25.946" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220330 09:33:20.945" endtime="20220330 09:33:25.946"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BOTAO_ORDENAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220329 10:24:31.142" level="INFO">Clicking element 'css=.eWfbNN &gt; div:nth-child(2) &gt; button:nth-child(2) &gt; span:nth-child(2)'.</msg>
-<status status="PASS" starttime="20220329 10:24:31.140" endtime="20220329 10:24:31.240"/>
+<msg timestamp="20220330 09:33:25.947" level="INFO">Clicking element 'css=.eWfbNN &gt; div:nth-child(2) &gt; button:nth-child(2) &gt; span:nth-child(2)'.</msg>
+<status status="PASS" starttime="20220330 09:33:25.947" endtime="20220330 09:33:26.049"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220329 10:24:34.243" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220329 10:24:31.241" endtime="20220329 10:24:34.244"/>
+<msg timestamp="20220330 09:33:29.050" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220330 09:33:26.049" endtime="20220330 09:33:29.050"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BOTAO_ORDENAR_PRECO_CRESCENTE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220329 10:24:34.245" level="INFO">Clicking element 'css=li.sc-iqseJM:nth-child(2)'.</msg>
-<status status="PASS" starttime="20220329 10:24:34.244" endtime="20220329 10:24:34.331"/>
+<msg timestamp="20220330 09:33:29.052" level="INFO">Clicking element 'css=li.sc-iqseJM:nth-child(2)'.</msg>
+<status status="PASS" starttime="20220330 09:33:29.050" endtime="20220330 09:33:29.130"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220329 10:24:37.332" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220329 10:24:34.331" endtime="20220329 10:24:37.332"/>
+<msg timestamp="20220330 09:33:32.132" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220330 09:33:29.131" endtime="20220330 09:33:32.132"/>
 </kw>
-<status status="PASS" starttime="20220329 10:24:22.925" endtime="20220329 10:24:37.333"/>
+<status status="PASS" starttime="20220330 09:33:17.744" endtime="20220330 09:33:32.133"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220329 10:24:37.334" endtime="20220329 10:24:37.472"/>
+<status status="PASS" starttime="20220330 09:33:32.133" endtime="20220330 09:33:32.299"/>
 </kw>
-<status status="PASS" starttime="20220329 10:24:04.499" endtime="20220329 10:24:37.472"/>
+<status status="PASS" starttime="20220330 09:32:51.201" endtime="20220330 09:33:32.300"/>
 </test>
-<status status="PASS" starttime="20220329 10:24:03.967" endtime="20220329 10:24:37.475"/>
+<status status="PASS" starttime="20220330 09:32:10.636" endtime="20220330 09:33:32.303"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Ecotur">Ecotur</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Ecotur">Ecotur</stat>
 </suite>
 </statistics>
 <errors>

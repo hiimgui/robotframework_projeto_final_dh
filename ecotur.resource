@@ -11,6 +11,7 @@ ${CRIAR_CONTA_SUBMIT}   css=.MuiButton-root
 ${INICIAR_SESSAO_SUBMIT}  css=.MuiButton-root
 ${BOTAO_MUDAR_TEMA}     css=button.sc-iqseJM:nth-child(3)
 ${EMPTY}                ""
+${BOTAO_MUDAR_TEMA}     css=.epoFYh
 ${DESTINO_INPUT}        css=#location-auto-complete
 ${CHECKIN_DATE}         css=#mui-5
 ${CHECKIN_DATE_PRODUTOS}  css=.InputBase-root-start-date
@@ -45,7 +46,12 @@ ${SLIDER_PRODUTOS}      css=.sc-gnnDb
 ${BOTAO_EXIBIR}         css=.eWfbNN > div:nth-child(1) > button:nth-child(2) > span:nth-child(2) > svg:nth-child(1)
 ${BOTAO_EXIBIR_24}      css=li.sc-iqseJM:nth-child(3)
 ${BOTAO_ORDENAR}        css=.eWfbNN > div:nth-child(2) > button:nth-child(2) > span:nth-child(2)
-${BOTAO_ORDENAR_PRECO_CRESCENTE}   css=li.sc-iqseJM:nth-child(2)
+${BOTAO_ORDENAR_PRECO_ASC}   css=li.sc-iqseJM:nth-child(2)
+${BOTAO_ORDENAR_PRECO_DESC} css=li.sc-iqseJM:nth-child(3)
+${BOTAO_ORDENAR_NOME_ASC}  css=li.sc-iqseJM:nth-child(4)
+${BOTAO_ORDENAR_NOME_DESC}  css=li.sc-iqseJM:nth-child(5)
+${IMAGEM_RESULTADO_1}  css=div.cEztdU:nth-child(1) > a:nth-child(1) > div:nth-child(1)
+
 
 *** Keywords ***
 Abrir o site ecotur
@@ -99,9 +105,9 @@ Inserir dados de login e senha e clicar submit
 
 Clicar ícone de mudança de tema
     Sleep  5s
-    Click Element                   css=button.sc-iqseJM:nth-child(3)
+    Click Element                   ${BOTAO_MUDAR_TEMA}
     Sleep  5s
-    Click Element                  css=button.sc-iqseJM:nth-child(3)
+    Click Element                   ${BOTAO_MUDAR_TEMA}
     Sleep  5s
 
 Preencher componente de escolha de data e destino
@@ -271,8 +277,15 @@ Teste botao "Ordenar"
     Sleep  5s
     Click Element                   ${BOTAO_ORDENAR}
     Sleep  3s
-    Click Element                   ${BOTAO_ORDENAR_PRECO_CRESCENTE}
+    Click Element                   ${BOTAO_ORDENAR_PRECO_ASC}
     Sleep  3s
+Teste clique imagem para levar a pagina de detalhes
+    Sleep  3s
+    Click Element                  ${BOTAO_VER_TODAS_CATEGORIAS}
+    Sleep  5s
+    Click Element                   ${IMAGEM_PRODUTO_1}
+    Sleep  5s
+
     
     
 

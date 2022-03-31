@@ -12,7 +12,7 @@ Resource  ./ecotur.resource
 #     Clicar em "Iniciar sessão página"
 #     Inserir dados de login e senha e clicar submit
 # [Teste de mudar de tema do site]
-#     Clicar icone de mudanca de tema
+#     Clicar ícone de mudança de tema
 # [Teste negativo validacao de email]
 #     Clicar em "Criar conta"
 #     Clicar no campo de input de email e colocar os dados e clicar em submit
