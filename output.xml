@@ -1,128 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.10 on darwin)" generated="20220330 09:32:10.633" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.9.10 on darwin)" generated="20220404 14:40:28.740" rpa="false" schemaversion="2">
 <suite id="s1" name="Ecotur" source="/Users/guilhermekageyama/Documents/Robot_Ecotur/ecotur.robot">
-<test id="s1-t1" name="[Teste de mudar de tema do site]">
+<test id="s1-t1" name="[Teste de criar conta]">
 <kw name="Abrir o site ecotur" library="ecotur" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${SITE}</arg>
 <arg>${NAVEGADOR}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220330 09:32:12.114" level="INFO">Opening browser 'chrome' to base url 'http://hikari.s3-website-us-east-1.amazonaws.com/'.</msg>
-<status status="PASS" starttime="20220330 09:32:12.106" endtime="20220330 09:32:35.460"/>
+<msg timestamp="20220404 14:40:31.943" level="INFO">Opening browser 'chrome' to base url 'http://hikari.s3-website-us-east-1.amazonaws.com/'.</msg>
+<status status="PASS" starttime="20220404 14:40:31.933" endtime="20220404 14:41:17.275"/>
 </kw>
-<status status="PASS" starttime="20220330 09:32:12.106" endtime="20220330 09:32:35.461"/>
+<status status="PASS" starttime="20220404 14:40:31.919" endtime="20220404 14:41:17.276"/>
 </kw>
-<kw name="Clicar ícone de mudança de tema" library="ecotur">
+<kw name="Clicar em &quot;Criar conta&quot;" library="ecotur">
 <kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220330 09:32:40.464" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220330 09:32:35.462" endtime="20220330 09:32:40.464"/>
+<msg timestamp="20220404 14:41:20.282" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:17.280" endtime="20220404 14:41:20.283"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${BOTAO_MUDAR_TEMA}</arg>
+<arg>${BOTAO_CRIAR_CONTA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220330 09:32:40.466" level="INFO">Clicking element 'css=button.sc-iqseJM:nth-child(3)'.</msg>
-<status status="PASS" starttime="20220330 09:32:40.464" endtime="20220330 09:32:40.785"/>
+<msg timestamp="20220404 14:41:20.286" level="INFO">Clicking element 'css=a.MuiMenuItem-root:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220404 14:41:20.283" endtime="20220404 14:41:20.829"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220330 09:32:45.786" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220330 09:32:40.786" endtime="20220330 09:32:45.787"/>
+<msg timestamp="20220404 14:41:23.831" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:20.830" endtime="20220404 14:41:23.831"/>
+</kw>
+<status status="PASS" starttime="20220404 14:41:17.277" endtime="20220404 14:41:23.832"/>
+</kw>
+<kw name="Clicar no campo de input de email e colocar os dados e clicar em submit" library="ecotur">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220404 14:41:25.837" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:23.836" endtime="20220404 14:41:25.837"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${BOTAO_MUDAR_TEMA}</arg>
+<arg>${BOTAO_CRIAR_CONTA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220330 09:32:45.788" level="INFO">Clicking element 'css=button.sc-iqseJM:nth-child(3)'.</msg>
-<status status="PASS" starttime="20220330 09:32:45.787" endtime="20220330 09:32:46.016"/>
+<msg timestamp="20220404 14:41:25.838" level="INFO">Clicking element 'css=a.MuiMenuItem-root:nth-child(1)'.</msg>
+<status status="PASS" starttime="20220404 14:41:25.837" endtime="20220404 14:41:25.941"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220404 14:41:27.943" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:25.941" endtime="20220404 14:41:27.943"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220404 14:41:27.944" level="INFO">Clicking element 'css=input[name="email"]'.</msg>
+<status status="PASS" starttime="20220404 14:41:27.944" endtime="20220404 14:41:28.056"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220404 14:41:30.060" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:28.057" endtime="20220404 14:41:30.060"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<arg>guiprocgmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 14:41:30.061" level="INFO">Typing text 'guiprocgmail.com' into text field 'css=input[name="email"]'.</msg>
+<status status="PASS" starttime="20220404 14:41:30.060" endtime="20220404 14:41:30.724"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220404 14:41:32.727" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:30.724" endtime="20220404 14:41:32.727"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SENHA_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220404 14:41:32.729" level="INFO">Clicking element 'css=input[name="password"]'.</msg>
+<status status="PASS" starttime="20220404 14:41:32.728" endtime="20220404 14:41:32.829"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220404 14:41:34.831" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:32.830" endtime="20220404 14:41:34.831"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<arg>guiproc@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 14:41:34.833" level="INFO">Typing text 'guiproc@gmail.com' into text field 'css=input[name="email"]'.</msg>
+<status status="PASS" starttime="20220404 14:41:34.832" endtime="20220404 14:41:35.472"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220404 14:41:37.473" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:35.472" endtime="20220404 14:41:37.474"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SENHA_INPUT}</arg>
+<arg>1234567</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 14:41:37.474" level="INFO">Typing text '1234567' into text field 'css=input[name="password"]'.</msg>
+<status status="PASS" starttime="20220404 14:41:37.474" endtime="20220404 14:41:37.812"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220404 14:41:39.818" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:37.815" endtime="20220404 14:41:39.818"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SENHA_INPUT}</arg>
+<arg>Aa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 14:41:39.820" level="INFO">Typing text 'Aa' into text field 'css=input[name="password"]'.</msg>
+<status status="PASS" starttime="20220404 14:41:39.818" endtime="20220404 14:41:39.999"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220404 14:41:42.001" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:39.999" endtime="20220404 14:41:42.001"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NOME_INPUT}</arg>
+<arg>guilherme</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 14:41:42.003" level="INFO">Typing text 'guilherme' into text field 'css=input[name="name"]'.</msg>
+<status status="PASS" starttime="20220404 14:41:42.002" endtime="20220404 14:41:42.637"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220404 14:41:44.640" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:42.638" endtime="20220404 14:41:44.641"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SOBRENOME_INPUT}</arg>
+<arg>procopio</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 14:41:44.642" level="INFO">Typing text 'procopio' into text field 'css=input[name="lastname"]'.</msg>
+<status status="PASS" starttime="20220404 14:41:44.641" endtime="20220404 14:41:45.095"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220404 14:41:47.098" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:45.096" endtime="20220404 14:41:47.098"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CRIAR_CONTA_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220404 14:41:47.101" level="INFO">Clicking element 'css=.MuiButton-root'.</msg>
+<status status="PASS" starttime="20220404 14:41:47.100" endtime="20220404 14:41:47.236"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220330 09:32:51.019" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220330 09:32:46.016" endtime="20220330 09:32:51.019"/>
+<msg timestamp="20220404 14:41:52.237" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220404 14:41:47.237" endtime="20220404 14:41:52.238"/>
 </kw>
-<status status="PASS" starttime="20220330 09:32:35.461" endtime="20220330 09:32:51.019"/>
+<status status="PASS" starttime="20220404 14:41:23.834" endtime="20220404 14:41:52.239"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220330 09:32:51.020" endtime="20220330 09:32:51.200"/>
+<status status="PASS" starttime="20220404 14:41:52.240" endtime="20220404 14:41:52.505"/>
 </kw>
-<status status="PASS" starttime="20220330 09:32:12.103" endtime="20220330 09:32:51.200"/>
+<status status="PASS" starttime="20220404 14:40:31.892" endtime="20220404 14:41:52.506"/>
 </test>
-<test id="s1-t2" name="[Teste botao &quot;Ordenar&quot;]">
-<kw name="Abrir o site ecotur" library="ecotur" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${SITE}</arg>
-<arg>${NAVEGADOR}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220330 09:32:51.203" level="INFO">Opening browser 'chrome' to base url 'http://hikari.s3-website-us-east-1.amazonaws.com/'.</msg>
-<status status="PASS" starttime="20220330 09:32:51.202" endtime="20220330 09:33:17.743"/>
-</kw>
-<status status="PASS" starttime="20220330 09:32:51.201" endtime="20220330 09:33:17.744"/>
-</kw>
-<kw name="Teste botao &quot;Ordenar&quot;" library="ecotur">
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220330 09:33:20.748" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220330 09:33:17.746" endtime="20220330 09:33:20.748"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${BOTAO_VER_TODAS_CATEGORIAS}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220330 09:33:20.750" level="INFO">Clicking element 'css=.MuiButton-outlinedPrimary'.</msg>
-<status status="PASS" starttime="20220330 09:33:20.749" endtime="20220330 09:33:20.944"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220330 09:33:25.946" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220330 09:33:20.945" endtime="20220330 09:33:25.946"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${BOTAO_ORDENAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220330 09:33:25.947" level="INFO">Clicking element 'css=.eWfbNN &gt; div:nth-child(2) &gt; button:nth-child(2) &gt; span:nth-child(2)'.</msg>
-<status status="PASS" starttime="20220330 09:33:25.947" endtime="20220330 09:33:26.049"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220330 09:33:29.050" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220330 09:33:26.049" endtime="20220330 09:33:29.050"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${BOTAO_ORDENAR_PRECO_CRESCENTE}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220330 09:33:29.052" level="INFO">Clicking element 'css=li.sc-iqseJM:nth-child(2)'.</msg>
-<status status="PASS" starttime="20220330 09:33:29.050" endtime="20220330 09:33:29.130"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220330 09:33:32.132" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220330 09:33:29.131" endtime="20220330 09:33:32.132"/>
-</kw>
-<status status="PASS" starttime="20220330 09:33:17.744" endtime="20220330 09:33:32.133"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220330 09:33:32.133" endtime="20220330 09:33:32.299"/>
-</kw>
-<status status="PASS" starttime="20220330 09:32:51.201" endtime="20220330 09:33:32.300"/>
-</test>
-<status status="PASS" starttime="20220330 09:32:10.636" endtime="20220330 09:33:32.303"/>
+<status status="PASS" starttime="20220404 14:40:28.800" endtime="20220404 14:41:52.515"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Ecotur">Ecotur</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ecotur">Ecotur</stat>
 </suite>
 </statistics>
 <errors>
