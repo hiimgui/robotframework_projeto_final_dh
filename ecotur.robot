@@ -5,9 +5,9 @@ Test Teardown  Close Browser
 Resource  ./ecotur.resource
 
 *** Test Cases ***
-[Teste de criar conta]
-    Clicar em "Criar conta"
-    Clicar no campo de input de email e colocar os dados e clicar em submit
+# [Teste de criar conta]
+#     Clicar em "Criar conta"
+#     Clicar no campo de input de email e colocar os dados e clicar em submit
 # [Teste de fazer login]
 #     Clicar em "Iniciar sessão página"
 #     Inserir dados de login e senha e clicar submit
@@ -38,3 +38,5 @@ Resource  ./ecotur.resource
 #     Teste botao "Ordenar"
 # [Teste componente calendario pagina produto especifico]
 #     Teste componente calendario pagina produto especifico
+[Teste de reserva de produto - Happy path ]
+    Teste de reserva de produto - happy path

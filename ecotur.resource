@@ -12,12 +12,12 @@ ${INICIAR_SESSAO_SUBMIT}        css=.MuiButton-root
 ${BOTAO_MUDAR_TEMA}             css=button.sc-iqseJM:nth-child(3)
 ${BOTAO_MUDAR_TEMA}             css=.epoFYh
 ${DESTINO_INPUT}                css=#location-auto-complete
-${CHECKIN_DATE}                 css=#mui-5
-${CHECKIN_DATE_PRODUTOS}        css=.InputBase-root-start-date
-${CHECKOUT_DATE_PRODUTOS}       css=#mui-122
-${DATE_PICKER_1}                css=div.sc-jivBlf:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(5) > div:nth-child(5) > div:nth-child(1) > button:nth-child(1)
-${DATE_PICKER_2}                css=div.sc-jivBlf:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div:nth-child(1) > button:nth-child(1)
-${PESQUISAR_BUTTON}             css=button.sc-iqseJM:nth-child(5)
+${CHECKIN_DATE}                 css=#mui-95-label
+${CHECKIN_DATE_PRODUTOS}        css=#mui-285
+${CHECKOUT_DATE_PRODUTOS}       css=#mui-96-label
+${DATE_PICKER_1}                css=div.sc-iWBNLc:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(4) > div:nth-child(6) > div:nth-child(1)
+${DATE_PICKER_2}                css=div.sc-iWBNLc:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(5) > div:nth-child(6) > div:nth-child(1) > button:nth-child(1)
+${PESQUISAR_BUTTON}             css=button.sc-fFeiMQ:nth-child(5) > svg:nth-child(1)
 ${PESQUISAR_BUTTON_PRODUTO}     css=button.MuiButton-root:nth-child(3)
 ${BOTAO_VER_TODAS_CATEGORIAS}   css=.MuiButton-outlinedPrimary
 ${CAROUSEL_BUTTON_LEFT}         css=button.sc-dFtzxp:nth-child(1) > svg:nth-child(1) 
@@ -98,9 +98,9 @@ Clicar em "Iniciar sessão página"
     Sleep  5s
 
 Inserir dados de login e senha e clicar submit
-    INPUT TEXT                      ${EMAIL_INPUT}  guiproc@gmail.com
+    INPUT TEXT                      ${EMAIL_INPUT}  guilhermekageyama@pm.me
     Sleep  5s
-    INPUT TEXT                      ${SENHA_INPUT}  1234567
+    INPUT TEXT                      ${SENHA_INPUT}  A1234567a
     Sleep  5s
     Click Element                   ${INICIAR_SESSAO_SUBMIT}
     Sleep  5s
@@ -128,7 +128,7 @@ Preencher componente de escolha de data e destino
     Click Element                 ${DATE_PICKER_2}
     Sleep  1s
     Click Element                   ${PESQUISAR_BUTTON}
-    Sleep  3s
+    Sleep  7s
 
 Teste de botao do componente categorias
     Sleep  5s
@@ -297,6 +297,11 @@ Teste componente calendario pagina produto especifico
     Sleep  2s
     Click Element                   ${INICIAR_RESERVA_BUTTON}
     Sleep  5s
+Teste de reserva de produto - happy path
+    Clicar em "Iniciar sessão página"
+    Inserir dados de login e senha e clicar submit
+    Preencher componente de escolha de data e destino
+
 
 
     
